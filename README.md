@@ -8,35 +8,30 @@ CLI de développement assisté par **Craftpick AI**.
 - GPT OSS 120B
 - MiniMax M3
 
-## Prérequis
-
-- Node.js 20+
-- Une passerelle Craftpick Code configurée via `CRAFTPICK_CODE_ENDPOINT`
-
-L'adresse interne de la passerelle n'est volontairement pas stockée dans le dépôt.
-
 ## Installation
+
+Node.js 20+ est requis.
+
+Installation directe :
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/louisoff84/CraftpickCodeCLi/main/install.sh | bash
+```
+
+Puis :
+
+```bash
+craftpickcode
+```
+
+Le script installe Craftpick Code dans `~/.local/share/craftpick-code`, crée les commandes `craftpickcode` et `craftpick-code`, et ajoute `~/.local/bin` au `PATH` si nécessaire.
+
+Depuis un clone du dépôt :
 
 ```bash
 chmod +x install.sh
 ./install.sh
 ```
-
-Ou manuellement :
-
-```bash
-npm install
-npm link
-```
-
-Configure ensuite l'endpoint côté machine, sans le committer :
-
-```bash
-export CRAFTPICK_CODE_ENDPOINT="https://ton-endpoint-prive"
-craftpickcode
-```
-
-Tu peux placer l'export dans ton profil shell (`~/.bashrc`, `~/.zshrc`) sur les machines autorisées.
 
 ## Utilisation
 
@@ -80,7 +75,3 @@ Craftpick Code peut :
 - conserver le contexte de la session.
 
 Par défaut, les écritures de fichiers et commandes shell demandent une confirmation. `--yolo` ou `/auto on` active l'approbation automatique.
-
-## Sécurité
-
-Ne committe jamais l'endpoint privé dans GitHub. `.env` est ignoré par Git et seule une valeur d'exemple est fournie dans `.env.example`.
