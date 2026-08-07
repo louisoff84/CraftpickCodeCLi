@@ -1,0 +1,19 @@
+{
+  "name": "craftpick-code",
+  "version": "0.1.0",
+  "description": "Craftpick Code - AI developer CLI",
+  "type": "module",
+  "bin": {
+    "craftpickcode": "./bin/craftpickcode.js",
+    "craftpick-code": "./bin/craftpickcode.js"
+  },
+  "scripts": {
+    "start": "node ./bin/craftpickcode.js",
+    "dev": "node ./bin/craftpickcode.js --debug",
+    "test": "node ./test/smoke.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
